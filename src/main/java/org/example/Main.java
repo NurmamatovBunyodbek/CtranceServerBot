@@ -15,6 +15,5 @@ public class Main {
         DB.fillCodes();
         System.out.println("Ishladi");
 
-
     }
 }

@@ -18,15 +18,16 @@ public class DB {
         int l = 0, r = users.size() - 1;
 
         while (l <= r) {
-            int mid = l + (r - l) / 2;
-            int comparisonResult = users.get(mid).getFirstName().compareToIgnoreCase(targetName);
+            int mider = l + (r - l) / 2;
+           // int comparisonResult = users.get(mider).getFirstName().compareToIgnoreCase(targetName);
+            int comparisonResult = users.get(mider).getFirstName().compareToIgnoreCase(targetName);
 
             if (comparisonResult == 0) {
-                return mid;
+                return mider;
             } else if (comparisonResult < 0) {
-                l = mid + 1;
+                l = mider + 1;
             } else {
-                r = mid - 1;
+                r = mider - 1;
             }
         }
         return -1;
