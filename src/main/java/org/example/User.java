@@ -7,10 +7,6 @@ import lombok.*;
  *Date:2/11/2024 *Time:12:06 PM
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 
 public class User {
     private String firstName;
@@ -23,6 +19,22 @@ public class User {
     private double moneyAmount;
     private String fromCurr;
     private String toCurr;
+
+    public User(String firstName, String phoneNumber, Positions currentPosition, String currentLanguage, double kg, double volume, String sendType, double moneyAmount, String fromCurr, String toCurr) {
+        this.firstName = firstName;
+        this.phoneNumber = phoneNumber;
+        this.currentPosition = currentPosition;
+        this.currentLanguage = currentLanguage;
+        this.kg = kg;
+        this.volume = volume;
+        this.sendType = sendType;
+        this.moneyAmount = moneyAmount;
+        this.fromCurr = fromCurr;
+        this.toCurr = toCurr;
+    }
+
+    public User() {
+    }
 
     public String getFirstName() {
         return firstName;
