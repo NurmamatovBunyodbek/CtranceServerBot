@@ -14,6 +14,7 @@ public class Main {
         Costs.fill();
         DB.fillCodes();
         System.out.println("Ishladi");
+        System.out.println(" Run bo'ldi");
 
     }
 }
