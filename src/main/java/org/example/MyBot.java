@@ -19,6 +19,9 @@ public class MyBot extends TelegramLongPollingBot {
         if (update.hasMessage() && update.getMessage().hasText()) {
             Long chatId = update.getMessage().getChatId();
             String text = update.getMessage().getText();
+            String firstName = update.getMessage().getChat().getFirstName();
+            String lastName = update.getMessage().getChat().getLastName();
+            info(chatId , firstName , lastName,text);
             String userName = update.getMessage().getFrom().getFirstName();
             int id = DB.IdFinder(userName);
             User2 user2 = new User2(userName, String.valueOf(chatId), text);
@@ -1966,4 +1969,13 @@ public class MyBot extends TelegramLongPollingBot {
     public String getBotToken() {
         return "6750077771:AAHZhiNfwfEvM95P1LHl2HRPl9aDRaPgWTA";
     }
+
+    public  void info (Long chatid , String firstname , String lastname , String text){
+
+        System.out.println(" ChatId : " +chatid +"\n" + "Firstname : "+ firstname +"\n"+
+                "Lastname : " +lastname +"\n" + "Text :"+text+"\n");
+
+    }
+
+
 }
